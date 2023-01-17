@@ -1,0 +1,58 @@
+:root {
+    --blue: #63c3f2;
+    --gray: #808080;
+    --white: #ffffff;
+    --max-width: 1000px;
+    --rootsize: 20px;
+}
+
+body {
+    font-size: var(--rootsize);
+    font-family: sans-serif;
+}
+
+div.container {
+    width: 100%;
+    max-width: var(--max-width);
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+header {
+    border: 1px solid var(--gray);
+}
+
+header h2 {
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+nav {
+    width: 100%;
+    border-bottom: 5px solid var(--blue);
+    margin-top: 2rem;
+}
+
+nav a {
+    text-transform: uppercase;
+    padding: 2rem;
+    border: 1px solid var(--gray);
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    display: inline-block;
+}
+
+nav a.active {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+}
+
+main {
+    border: 1px solid var(--gray);
+    padding: 0 2rem;;
+}
+
+main h2 {
+    text-transform: uppercase;
+}
