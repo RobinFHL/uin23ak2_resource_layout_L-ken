@@ -94,3 +94,90 @@ const resources = [
         ]
     },
 ]
+
+
+document.querySelector("main h2").innerHTML = resources[0].category
+    document.querySelector("main p").innerHTML = resources[0].text
+    listHTML = ""
+    resources.slice(0,1).map((array) => { 
+        array.sources.map(source =>            
+            listHTML += `<li><a href=${source.url}>${source.title}</a></li>`
+        )    
+        document.querySelector("main ul li a").innerHTML = listHTML
+})
+
+function button1() {
+    changeColor()
+    document.querySelector("main h2").innerHTML = resources[0].category
+    document.querySelector("main p").innerHTML = resources[0].text
+    listHTML = ""
+    resources.slice(0,1).map((array) => { 
+        array.sources.map(source =>            
+            listHTML += `<li><a href=${source.url}>${source.title}</a></li>`
+        )    
+        document.querySelector("main ul li a").innerHTML = listHTML
+})
+}
+
+function button2() {
+    changeColor()
+    document.querySelector("main h2").innerHTML = resources[1].category
+    document.querySelector("main p").innerHTML = resources[1].text
+    listCSS = ""
+    resources.slice(1,2).map((array) => { 
+        array.sources.map(source =>            
+            listCSS += `<li><a href=${source.url}>${source.title}</a></li>`
+        )    
+        document.querySelector("main ul li a").innerHTML = listCSS
+})
+}
+
+function button3() {
+    changeColor()
+    document.querySelector("main h2").innerHTML = resources[2].category
+    document.querySelector("main p").innerHTML = resources[2].text
+    listJS = ""
+    resources.slice(2,3).map((array) => { 
+        array.sources.map(source =>            
+            listJS += `<li><a href=${source.url}>${source.title}</a></li>`
+        )    
+        document.querySelector("main ul li a").innerHTML = listJS
+})
+}
+
+function button4() {
+    changeColor()
+    document.querySelector("main h2").innerHTML = resources[3].category
+    document.querySelector("main p").innerHTML = resources[3].text
+    listReact = ""
+    resources.slice(3,4).map((array) => { 
+        array.sources.map(source =>            
+            listReact += `<li><a href=${source.url}>${source.title}</a></li>`
+        )    
+        document.querySelector("main ul li a").innerHTML = listReact
+})
+}
+
+function button5() {
+    changeColor()
+    document.querySelector("main h2").innerHTML = resources[4].category
+    document.querySelector("main p").innerHTML = resources[4].text
+    listSanity = ""
+    resources.slice(4,5).map((array) => { 
+        array.sources.map(source =>            
+            listSanity += `<li><a href=${source.url}>${source.title}</a></li>`
+        )    
+        document.querySelector("main ul li a").innerHTML = listSanity
+})
+}
+
+function changeColor() {
+    let colors = document.querySelectorAll("nav a");
+
+    colors.forEach(color => {
+    color.addEventListener("click", e => {
+    document.querySelector("nav a.active").classList.remove("active")
+    e.target.classList.add("active");
+  });
+});
+}

@@ -42,7 +42,11 @@ nav a {
     display: inline-block;
 }
 
-nav a.active {
+nav a:hover {
+    cursor: pointer;
+}
+
+.active {
     background-color: var(--blue);
     color: var(--white);
     border: none;
