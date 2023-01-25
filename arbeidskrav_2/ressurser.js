@@ -172,12 +172,12 @@ function button5() {
 }
 
 function changeColor() {
-    let colors = document.querySelectorAll("nav a");
+    let colors = document.querySelectorAll("nav a")
 
     colors.forEach(color => {
     color.addEventListener("click", e => {
     document.querySelector("nav a.active").classList.remove("active")
-    e.target.classList.add("active");
-  });
-});
+    e.target.classList.add("active")
+  })
+})
 }
